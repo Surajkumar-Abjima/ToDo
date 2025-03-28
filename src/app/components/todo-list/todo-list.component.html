@@ -1,29 +1,51 @@
 <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">sl.no</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>twitter</td>
-      </tr>
-    </tbody>
-  </table>
+  <thead>
+    <tr>
+      <th scope="col">Sl.No</th>
+      <th scope="col">Task</th>
+      <th scope="col">Progress</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(item of data;track $index){
+    @if(editingItem && editingItem.id===item.id){
+    <td>{{$index+1}}</td>
+    <td><input type="text" class="form-control w-50" [(ngModel)]="editingItem.task"></td>
+    <td>
+      <div class="form-check">
+        <input type="radio" class="form-check-input border-dark" name="progress" [(ngModel)]="editingItem.status"
+          value="To-Do">
+        <label class="form-check-label">To-Do</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input border-dark" name="progress" [(ngModel)]="editingItem.status"
+          value="In Progress">
+        <label class="form-check-label">In Progress</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input border-dark" name="progress" [(ngModel)]="editingItem.status"
+          value="Completed">
+        <label class="form-check-label">Completed</label>
+      </div>
+    </td>
+    <td class="d-flex flex-column w-50 ">
+      <button class="btn btn-outline-success mb-2" (click)="saveItem()">Save</button>
+      <button class="btn btn-outline-danger" (click)="cancelEdit()">Cancel</button>
+    </td>
+
+    }@else {
+    <tr>
+      <th scope="row">{{$index+1}}</th>
+      <td>{{item.task}}</td>
+      <td>{{item.status}}</td>
+      <td><button class="btn btn-outline-info" (click)="editItem(item)">Edit</button></td>
+      <td><button class="btn btn-outline-danger" (click)="deleteItem(item)">Delete</button></td>
+
+    </tr>
+    }
+    }
+
+  </tbody>
+</table>

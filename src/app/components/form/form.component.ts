@@ -1,6 +1,7 @@
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -13,7 +14,7 @@ export class FormComponent {
   seletedProgress: string = '';
   private api='http://localhost:3000/data'
 
-  constructor(private http:HttpClient){}
+  constructor(private http:HttpClient, private router:Router){}
 
   handleSubmit(form: any) {
     
@@ -28,6 +29,7 @@ export class FormComponent {
         this.http.post(this.api,newEntry).subscribe(()=>{
           alert("Data added successfully");
           form.reset()
+          this.router.navigate(['/'])
         })
       }
 
