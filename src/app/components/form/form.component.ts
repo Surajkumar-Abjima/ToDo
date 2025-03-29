@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-form',
   imports: [FormsModule],
+  // standalone:false,
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })

@@ -1,0 +1,60 @@
+.fa-bookmark {
+    padding: 5px;
+    background: #52bbad;
+}
+.nuc{
+    font-size: 13px;
+}
+
+
+.profile img{
+    background-color: rgb(201, 200, 200);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.tasks{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.slNo,.edits{
+    background-color: rgb(226, 224, 224);
+    height: 20px;
+    width: 20px;
+    font-size: 11px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edits{
+    color:rgb(97, 97, 97);
+}
+.scount{
+    background-color: rgb(161, 161, 161);
+    height: 20px;
+    width: 20px;
+    font-size: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.radio-div,.edit-input{
+    font-size: 13px;
+}
+.card{
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.column{
+    background-color: rgb(233, 233, 233);
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
