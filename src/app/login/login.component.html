@@ -1,0 +1,25 @@
+<div
+  class="flex flex-column justify-content-center align-items-center h-screen surface-200 gap"
+>
+  <div
+    class="flex flex-column gap-2 py-8 px-6 surface-400 border-round-2xl shadow-8"
+  >
+    <p class="text-center text-2xl mb-4 font-semibold">LOGIN</p>
+    <input
+      type="text"
+      pInputText
+      [(ngModel)]="loginObj.username"
+      (input)="handleChange()"
+      placeholder="Enter Email"
+    />
+    <input
+      type="password"
+      pInputText
+      [(ngModel)]="loginObj.password"
+      placeholder="Enter Password"
+    />
+    <div class="flex justify-content-center align-items-center mt-4">
+      <p-button label="Login" [raised]="true" severity="secondary" (click)="handleLogin()"/>
+    </div>
+  </div>
+</div>
