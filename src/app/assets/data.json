@@ -41,11 +41,6 @@
       "status": "Completed"
     },
     {
-      "id": "q876",
-      "task": "write user onboarding flow",
-      "status": "To-Do"
-    },
-    {
       "id": "r543",
       "task": "add logging to backend",
       "status": "To-Do"
