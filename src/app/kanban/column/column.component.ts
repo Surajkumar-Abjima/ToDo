@@ -61,6 +61,17 @@ export class ColumnComponent {
     console.log(error);
     
   })
+    this.http.delete(`${this.api}/${task.id}`).subscribe({
+      next:response=>{
+
+      },
+      error:(err) =>{
+        
+      },
+      complete:()=>{
+
+      }
+    })
   }
 
 }
