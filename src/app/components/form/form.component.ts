@@ -8,33 +8,31 @@ import { Router } from '@angular/router';
   imports: [FormsModule],
   // standalone:false,
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  styleUrls: ['./form.component.scss'],
 })
 export class FormComponent {
   userTask: string = '';
   seletedProgress: string = '';
-  private api='http://localhost:3000/data'
+  private api = 'http://localhost:3000/data';
 
-  constructor(private http:HttpClient, private router:Router){}
+  constructor(private http: HttpClient, private router: Router) {}
 
   handleSubmit(form: any) {
-    
-      console.log('User Task:', this.userTask);
-      console.log('Selected Progress:', this.seletedProgress);
+    console.log('User Task:', this.userTask);
+    console.log('Selected Progress:', this.seletedProgress);
 
-      if(this.userTask && this.seletedProgress){
-        const newEntry={
-          task:this.userTask,
-          status:this.seletedProgress
-        }
-        this.http.post(this.api,newEntry).subscribe(()=>{
-          alert("Data added successfully");
-          form.reset()
-          this.router.navigate(['/'])
-        })
-      }
+    if (this.userTask && this.seletedProgress) {
+      const newEntry = {
+        task: this.userTask,
+        status: this.seletedProgress,
+      };
+      this.http.post(this.api, newEntry).subscribe(() => {
+        alert('Data added successfully');
+        form.reset();
+        this.router.navigate(['/kanban']);
+      });
+    }
 
-      form.reset();
-    
+    form.reset();
   }
 }
