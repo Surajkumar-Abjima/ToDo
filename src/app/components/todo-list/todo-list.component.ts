@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ApiService } from '../../services/api.service';
+import { SharedDataService } from '../../services/shared-data.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -12,22 +14,23 @@ export class TodoListComponent {
   private api = "http://localhost:3000/data"
   data: any = [];
   editingItem: any = null;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private apiservice:ApiService,private sharedServices:SharedDataService) { }
 
   ngOnInit(): void {
-    this.http.get<any>(this.api).subscribe((res) => {
-      this.data = res;
-      console.log(this.data);
-
-    },
-      (error) => {
-        console.log(error);
-
-      })
+    this.apiservice.data$.subscribe((res) => {
+       this.data = res;
+       
+ 
+     },
+       (error) => {
+         console.log(error);
+ 
+       })
+    this.apiservice.fetchData()
   }
 
   editItem(item: any) {
-    this.editingItem = { ...item }
+    this.sharedServices.sendData(item)
   }
 
   saveItem() {
