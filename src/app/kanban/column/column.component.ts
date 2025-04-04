@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common'; // Import this
 import { FormsModule } from '@angular/forms';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-column',
@@ -14,14 +15,15 @@ export class ColumnComponent {
   data: any = []
   editingItem:any=null
   statuses=['To-Do','In Progress', 'In QA', 'Completed']
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private apiService:ApiService) { }
 
 
   ngOnInit(): void{
-    this.http.get(this.api).subscribe((res:any)=>{
+    this.apiService.data$.subscribe((res:any)=>{
       this.data=res
       console.log(this.data)
     })
+    this.apiService.fetchData()
   }
 
   editItem(item:any){
