@@ -1,7 +1,4 @@
 import { Routes } from '@angular/router';
-import { FormComponent } from './components/form/form.component';
-import { TodoListComponent } from './components/todo-list/todo-list.component';
-import { KanbanBoardComponent } from './kanban/kanban-board/kanban-board.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { authGuard } from './gaurd/auth.guard';
@@ -15,9 +12,9 @@ export const routes: Routes = [
     component: NavbarComponent,
     canActivateChild:[authGuard],
     children: [
-      { path: 'addTask', component: FormComponent },
-      { path: 'todo', component: TodoListComponent },
-      { path: 'kanban', component: KanbanBoardComponent },
+      { path: 'addTask', loadComponent:()=>import('./components/form/form.component').then(m=>m.FormComponent) },
+      { path: 'todo', loadComponent:()=>import('./components/todo-list/todo-list.component').then(m=>m.TodoListComponent) },
+      { path: 'kanban', loadComponent:()=>import('./kanban/kanban-board/kanban-board.component').then(m=>m.KanbanBoardComponent)},
     ],
   },
 ];

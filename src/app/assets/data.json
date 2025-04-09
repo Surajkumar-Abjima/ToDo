@@ -1,136 +1,142 @@
 {
   "data": [
     {
+      "task": "review PR #456 updated",
+      "description": "Review pull request for recent feature updates. updated",
+      "status": "In QA",
       "id": "g678",
-      "task": "review PR #456",
-      "status": "In QA"
+      "daysToAdd": 13
     },
     {
       "id": "i345",
       "task": "implement dark mode",
-      "status": "In QA"
+      "status": "In QA",
+      "description": "Add dark mode styling across the application.",
+      "daysToAdd": 3
     },
     {
       "id": "j654",
       "task": "set up CI/CD pipeline",
-      "status": "In QA"
+      "status": "In QA",
+      "description": "Configure GitHub Actions for automated testing and deployment.",
+      "daysToAdd": 10
     },
     {
       "id": "k876",
       "task": "write API documentation",
-      "status": "In QA"
+      "status": "In QA",
+      "description": "Document all REST endpoints in Swagger.",
+      "daysToAdd": 5
     },
     {
-      "id": "o234",
-      "task": "debug memory leak",
-      "status": "In QA"
+      "task": "debug memory leak edited",
+      "description": "Investigate and resolve memory usage issues in the frontend.",
+      "status": "Completed",
+      "daystoAdd": 3,
+      "duedate": "2025-04-12",
+      "id": "o234"
     },
     {
+      "task": "add logging to backend update",
+      "description": "Integrate Winston logger for error and activity tracking.",
+      "status": "Completed",
       "id": "r543",
-      "task": "add logging to backend",
-      "status": "To-Do"
+      "daysToAdd": 1
     },
     {
-      "id": "s321",
       "task": "create unit tests for service layer",
-      "status": "In QA"
+      "description": "Write Jasmine tests for the user and auth services.",
+      "status": "Completed",
+      "id": "s321",
+      "daysToAdd": 6
     },
     {
-      "id": "t765",
-      "task": "redesign homepage",
-      "status": "In Progress"
-    },
-    {
-      "id": "u456",
       "task": "add multi-language support",
-      "status": "To-Do"
+      "description": "Enable language switching using ngx-translate.",
+      "status": "To-Do",
+      "daystoAdd": 1,
+      "duedate": "2025-04-10",
+      "id": "u456"
     },
     {
       "id": "v987",
       "task": "implement websocket communication",
-      "status": "In Progress"
+      "status": "In Progress",
+      "description": "Set up real-time chat updates using socket.io.",
+      "daysToAdd": 2
     },
     {
       "id": "w234",
       "task": "write automated test scripts",
-      "status": "In QA"
+      "status": "In QA",
+      "description": "Create Cypress tests for major user flows.",
+      "daysToAdd": 12
     },
     {
-      "id": "y876",
       "task": "review security vulnerabilities",
-      "status": "To-Do"
+      "description": "Run security scan and patch known issues.",
+      "status": "To-Do",
+      "daystoAdd": 0,
+      "duedate": "2025-04-09",
+      "id": "y876"
     },
     {
       "id": "z543",
       "task": "fix mobile navigation bug",
-      "status": "In Progress"
+      "status": "In Progress",
+      "description": "Resolve hamburger menu not opening on iOS.",
+      "daysToAdd": 7
     },
     {
-      "id": "aa321",
       "task": "integrate payment gateway",
-      "status": "In QA"
+      "description": "Add Stripe integration for checkout flow.",
+      "status": "Completed",
+      "id": "aa321",
+      "daysToAdd": 15
     },
     {
-      "id": "cc456",
       "task": "implement lazy loading",
-      "status": "To-Do"
+      "description": "Optimize app performance by loading modules lazily.",
+      "status": "To-Do",
+      "daystoAdd": -1,
+      "duedate": "2025-04-08",
+      "id": "cc456"
     },
     {
       "id": "dd987",
       "task": "improve search functionality",
-      "status": "In Progress"
+      "status": "In Progress",
+      "description": "Add debounce and ranking to search results.",
+      "daysToAdd": 8
     },
     {
-      "id": "8455",
-      "task": "hi",
-      "status": "In Progress"
-    },
-    {
-      "id": "766c",
-      "task": "Hiii",
-      "status": "To-Do"
-    },
-    {
-      "id": "43b7",
+      "id": "4d4d",
       "task": "hello",
-      "description": "sjdjajsdjas",
-      "status": "Completed"
+      "description": "hello",
+      "status": "Completed",
+      "daysToAdd": 6
     },
     {
-      "id": "2b6c",
-      "task": "test",
-      "description": "n asdasd",
-      "status": "Completed"
+      "id": "98d6",
+      "task": "due date",
+      "description": "due date",
+      "status": "Completed",
+      "daysToAdd": 9
     },
     {
-      "id": "18ae",
-      "task": "test111",
-      "description": "sjndjjasjdashdahs",
-      "status": "Completed"
-    },
-    {
-      "id": "1d46",
-      "task": "sjajdas",
-      "description": "asjdbas",
-      "status": "Completed"
-    },
-    {
-      "id": "f4d4",
+      "id": "ec7c",
       "task": "test",
       "description": "test",
-      "status": "To-Do"
+      "status": "Completed",
+      "daystoAdd": 4
     },
     {
-      "id": "e9c0",
-      "task": "asdasd",
-      "description": "tst",
-      "status": "To-Do"
-    },
-    {
-      "id": "ff22",
-      "task": "asdasd",
-      "description": "tst",
-      "status": "To-Do"
+      "id": "8d9e",
+      "task": "test1",
+      "description": "test1",
+      "status": "To-Do",
+      "daystoAdd": 5,
+      "duedate": "2025-04-14"
     }
   ]
 }

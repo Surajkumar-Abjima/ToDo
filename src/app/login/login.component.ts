@@ -19,16 +19,16 @@ export class LoginComponent {
 
   constructor(private route: Router, private http: HttpClient) {}
 
-  handleChange() {
-    // console.log(this.loginObj.evalue);
-  }
+  // handleChange() {
+  //   // console.log(this.loginObj.evalue);
+  // }
 
   handleLogin() {
     this.http.post('https://dummyjson.com/auth/login', this.loginObj).subscribe(
       (res: any) => {
-        console.log(res.firstName);
-        localStorage.setItem("UserData",res.firstName)
-        console.log(res.firstName);
+        console.log(res.accessToken);
+        localStorage.setItem("UserData",res.accessToken)
+        // console.log(res.firstName);
         this.route.navigate(['/kanban']);
       },
       (error) => {
