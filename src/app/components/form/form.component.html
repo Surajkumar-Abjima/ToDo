@@ -45,39 +45,45 @@
         <label for="over_label">Task Title</label>
       </p-floatlabel>
     </div>
-
+    
     <div>
       <label for="status">Status:</label>
       @for (status of statuses;track $index){
-      <div class="flex items-center">
-        <p-radiobutton
+        <div class="flex items-center">
+          <p-radiobutton
           name="status"
           [value]="status"
           formControlName="status"
-        />
-        <label class="ml-2">{{ status }}</label>
-      </div>
+          />
+          <label class="ml-2">{{ status }}</label>
+        </div>
       }
     </div>
-
+    
     <div class="flex items-center gap-4 mb-4">
       <p-floatlabel class="mt-5" variant="on">
         <textarea
-          pTextarea
-          id="over_label"
-          rows="5"
-          cols="30"
-          style="resize: none"
-          class="h-full"
-          formControlName="description"
+        pTextarea
+        id="over_label"
+        rows="5"
+        cols="30"
+        style="resize: none"
+        class="h-full"
+        formControlName="description"
         ></textarea>
         <label for="over_label">Description</label>
+      </p-floatlabel>
+    </div>
+    <div class="flex items-center gap-4 mb-4">
+      <p-floatlabel class="mt-3" variant="on">
+        <input type="number" pInputText id="over_label" autocomplete="off" formControlName="daystoAdd"/>
+        <label for="over_label">DueDate Eg: 7</label>
       </p-floatlabel>
     </div>
 
     <div class="flex justify-end gap-2">
       <p-button label="Cancel" severity="secondary" (click)="visible = false" />
-      <p-button label="Save" (click)="visible = false"  (click)="handleSubmit()" />
+      <p-button label="Save" (click)="visible = false" (click)="handleSubmit()" />
     </div>
   </p-dialog>
 </form>

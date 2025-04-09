@@ -4,6 +4,7 @@
       <tr>
         <th scope="col">Sl.No</th>
         <th scope="col">Task</th>
+        <th scope="col">Description</th>
         <th scope="col">Progress</th>
         <th scope="col">Edit</th>
         <th scope="col">Delete</th>
@@ -13,7 +14,7 @@
       @for(item of data; track $index) {
       <tr>
         <td>{{$index + 1}}</td>
-        @if(editingItem && editingItem.id === item.id) {
+        <!-- @if(editingItem && editingItem.id === item.id) {
         <td>
           <input type="text" class="form-control" [(ngModel)]="editingItem.task" name="editTask_{{$index}}" required>
         </td>
@@ -43,15 +44,16 @@
           <button class="btn btn-outline-success btn-sm w-100" (click)="saveItem()">Save</button>
           <button class="btn btn-outline-danger btn-sm w-100 mt-1" (click)="cancelEdit()">Cancel</button>
         </td>
-        <td></td> <!-- Empty Delete column during edit -->
-        } @else {
+        <td></td>
+        } @else { -->
         <td>{{item.task}}</td>
+        <td>{{item.description}}</td>
         <td>{{item.status}}</td>
         <td><button class="btn btn-outline-info btn-sm w-100" (click)="editItem(item)">Edit</button></td>
         <td><button class="btn btn-outline-danger btn-sm w-100" (click)="deleteItem(item)">Delete</button></td>
         }
-      </tr>
-      }
+      <!-- </tr> -->
+      <!-- } -->
     </tbody>
   </table>
 </div>
