@@ -59,11 +59,12 @@
       "id": "u456"
     },
     {
-      "id": "v987",
       "task": "implement websocket communication",
-      "status": "In Progress",
       "description": "Set up real-time chat updates using socket.io.",
-      "daysToAdd": 2
+      "status": "To-Do",
+      "daystoAdd": 8,
+      "duedate": "2025-04-18",
+      "id": "v987"
     },
     {
       "id": "w234",
@@ -103,11 +104,12 @@
       "id": "cc456"
     },
     {
-      "id": "dd987",
       "task": "improve search functionality",
-      "status": "In Progress",
       "description": "Add debounce and ranking to search results.",
-      "daysToAdd": 8
+      "status": "To-Do",
+      "daystoAdd": 5,
+      "duedate": "2025-04-15",
+      "id": "dd987"
     },
     {
       "id": "4d4d",
@@ -137,6 +139,14 @@
       "status": "To-Do",
       "daystoAdd": 5,
       "duedate": "2025-04-14"
+    },
+    {
+      "id": "b8e3",
+      "task": "checking services",
+      "description": "checking services",
+      "status": "In Progress",
+      "daystoAdd": 1,
+      "duedate": "2025-04-11"
     }
   ]
 }

@@ -4,7 +4,8 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-kanban-board',
-  imports: [ ColumnComponent],
+  standalone:false,
+  // imports: [ ColumnComponent],
   templateUrl: './kanban-board.component.html',
   styleUrl: './kanban-board.component.scss'
 })

@@ -5,13 +5,16 @@ import { FormComponent } from '../form/form.component';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterModule, ButtonModule, FormComponent],
+  standalone:false,
+  // imports: [RouterModule, ButtonModule, FormComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
 
-  constructor(private router:Router){}
+  constructor(private router:Router){
+    
+  }
   @ViewChild(FormComponent)show!:(FormComponent)
   
   handleLogOut(){

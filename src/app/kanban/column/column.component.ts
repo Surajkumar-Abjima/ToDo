@@ -7,7 +7,8 @@ import { SharedDataService } from '../../services/shared-data.service';
 
 @Component({
   selector: 'app-column',
-  imports: [CommonModule,FormsModule],
+  standalone:false,
+  // imports: [CommonModule,FormsModule],
   templateUrl: './column.component.html',
   styleUrl: './column.component.scss'
 })

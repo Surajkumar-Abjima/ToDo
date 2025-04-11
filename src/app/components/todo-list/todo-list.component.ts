@@ -6,7 +6,8 @@ import { SharedDataService } from '../../services/shared-data.service';
 
 @Component({
   selector: 'app-todo-list',
-  imports: [FormsModule],
+  // imports: [FormsModule],
+  standalone:false,
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.scss'
 })

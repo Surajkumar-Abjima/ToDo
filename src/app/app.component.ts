@@ -6,8 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 
 @Component({
+  standalone:false,
   selector: 'app-root',
-  imports: [ FormsModule,LoginComponent,NavbarComponent,RouterOutlet],
+  // imports: [ FormsModule,LoginComponent,NavbarComponent,RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
